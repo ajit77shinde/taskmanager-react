@@ -116,11 +116,11 @@ header .themeSelector .activeTheme {
   padding: 5px 5px;
   border: 1px solid #eaeaea;
   border-radius: 5px;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .addTask form input:focus {
-  outline: 0.5px solid #eaeaea;
+  outline: 0.5px solid rgba(192, 18, 192, 0.667);
 }
 
 .addTask form button {
