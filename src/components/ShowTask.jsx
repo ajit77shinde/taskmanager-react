@@ -8,7 +8,7 @@ function ShowTask({ taskList, setTaskList, handleDone, handleEdit, handleDelete,
                     <span className="count">{taskList.length}</span>
                 </span>
                 <span className="clearDone" onClick={() =>{  if (window.confirm('Are you sure, you wish to delete all done tasks?')) clearDoneTask()} }>Clear Done</span>
-                <span className="clearAll" onClick={() => setTaskList([])}>Clear All</span>
+                <span className="clearAll" onClick={() => {if (window.confirm('Are you sure, you wish to delete all tasks?'))setTaskList([])} }>Clear All</span>
             </p>
             <ul>
                 {taskList.map((task) => (
