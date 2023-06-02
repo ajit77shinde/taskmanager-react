@@ -16,8 +16,8 @@ function ShowTask({ taskList, setTaskList, handleEdit, handleDelete }) {
                             <span className="name">{task.name}</span>
                             <span className="time">{task.time}</span>
                         </p>
-                        <i className="bi bi-pencil-square" onClick={() => handleEdit(task.id)}>edit</i>
-                        <i className="bi bi-trash" onClick={() => handleDelete(task.id)}>delete</i>
+                        <i className="bi bi-pencil-square" onClick={() => handleEdit(task.id)}></i>
+                        <i className="bi bi-trash" onClick={() => handleDelete(task.id)}></i>
                     </li>
                 ))}
             </ul>
