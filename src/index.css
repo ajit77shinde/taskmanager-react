@@ -203,6 +203,10 @@ header .themeSelector .activeTheme {
   border-left: 5px solid #1365dfaf;
 }
 
+.showTask li.done{
+  border-left: 5px solid #acbdd7af;
+}
+
 .showTask li:hover {
   background-color: #f8f8f8;
 }
@@ -232,6 +236,11 @@ header .themeSelector .activeTheme {
 .showTask i.bi-trash {
   font-size: 18px;
   color: #D82148;
+  cursor: pointer;
+}
+.showTask i[class*='bi-bookmark-check'] {
+  font-size: 18px;
+  color: #16c439;
   cursor: pointer;
 }
 

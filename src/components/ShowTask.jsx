@@ -1,5 +1,5 @@
 import React from 'react';
-function ShowTask({ taskList, setTaskList, handleEdit, handleDelete }) {
+function ShowTask({ taskList, setTaskList, handleDone, handleEdit, handleDelete }) {
     return (
         <section className="showTask">
             <p className="head">
@@ -11,11 +11,13 @@ function ShowTask({ taskList, setTaskList, handleEdit, handleDelete }) {
             </p>
             <ul>
                 {taskList.map((task) => (
-                    <li key={task.id}>
+                    <li className={`${task.taskDone? 'done': ''}`} key={task.id}>
                         <p>
                             <span className="name">{task.name}</span>
                             <span className="time">{task.time}</span>
                         </p>
+                        <i className={`bi bi-bookmark-check${task.taskDone? '-fill': ''}`} onClick={() => handleDone(task.id)}></i>
+                        {/* <i class="bi bi-bookmark-check-fill"></i> */}
                         <i className="bi bi-pencil-square" onClick={() => handleEdit(task.id)}></i>
                         <i className="bi bi-trash" onClick={() => handleDelete(task.id)}></i>
                     </li>
