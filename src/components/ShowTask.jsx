@@ -1,5 +1,5 @@
 import React from 'react';
-function ShowTask({ taskList, setTaskList, handleDone, handleEdit, handleDelete }) {
+function ShowTask({ taskList, setTaskList, handleDone, handleEdit, handleDelete, clearDoneTask }) {
     return (
         <section className="showTask">
             <p className="head">
@@ -7,6 +7,7 @@ function ShowTask({ taskList, setTaskList, handleDone, handleEdit, handleDelete 
                     <span className="title">Todo</span>
                     <span className="count">{taskList.length}</span>
                 </span>
+                <span className="clearDone" onClick={() =>{  if (window.confirm('Are you sure, you wish to delete all done tasks?')) clearDoneTask()} }>Clear Done</span>
                 <span className="clearAll" onClick={() => setTaskList([])}>Clear All</span>
             </p>
             <ul>

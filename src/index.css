@@ -172,6 +172,14 @@ header .themeSelector .activeTheme {
 }
 
 .showTask .clearAll {
+  background-color: #eb1d1d;;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+.showTask .clearDone {
   background-color: #0f6af3;
   color: #FFFFFF;
   padding: 5px 10px;

@@ -57,13 +57,18 @@ function App() {
     const doneTaskList = [...notUpdatedTaskList,...doneTask].filter(task => task.taskDone === true);
     setTaskList([...notDoneTaskList,...doneTaskList]);
   }
+  const clearDoneTask = () =>{
+    const notDoneTaskList = taskList.filter((task) => task.taskDone !== true);
+    setTaskList(notDoneTaskList);
+  }
   return (
     <div className={"App " + theme}>
       <div className="container">
         <Header setTheme={setTheme} theme={theme}
         >Task Manager </Header>
         <AddTask handleSubmit={handleSubmit} editid={editid} task={task} setTask={setTask}></AddTask>
-        <ShowTask taskList={taskList} setTaskList={setTaskList} handleDone={handleDone} handleEdit={handleEdit} handleDelete={handleDelete}></ShowTask>
+        <ShowTask taskList={taskList} setTaskList={setTaskList} handleDone={handleDone} handleEdit={handleEdit} 
+        handleDelete={handleDelete} clearDoneTask={clearDoneTask} ></ShowTask>
       </div>
     </div>
   )
